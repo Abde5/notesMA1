@@ -1,4 +1,4 @@
-#Practical information
+# Practical information
 - Prof: Geeraerts
 - Evaluation:
   - 12 points written exam
@@ -8,7 +8,7 @@
     - code generation
 
 
-# Introduction
+# Chapter 1: Introduction
 
 Two parts: **Language theory** and **Compilers**.
 
