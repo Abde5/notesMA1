@@ -49,7 +49,7 @@ Language: set of strings/words (alphabet = {0,1} )
 
 You can use bisection (dichotomic search) to find the best answer that decides the problem also (like the shortest path of at least cost d).
 
-# Finite automata
+# Chapter 1: Finite automata
 
 ## Determinism
 
