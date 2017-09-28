@@ -1,0 +1,10 @@
+digraph finite_state_machine {
+    rankdir=LR;
+    size="8,5"
+
+    node [shape = point ]; qi;
+    node [shape = doublecircle]; 2;
+    node [shape = circle]; 1;
+    qi -> 1
+    1 -> 2 [label = "a"]
+}

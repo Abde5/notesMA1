@@ -39,9 +39,9 @@
 *Clarification:* In every graph $G$, the min. size of a vertex cover is $\geq$ the max size of a matching.
 
   **THEOREM (Tutte, 1961):** A graph $G$ has a *perfect matching* (matching covering all of $V(G)$)
-  $\Leftrightarrow|S| \geq q_{odd} (G-S)\ \ \ \ \  \forall S\subseteq V(G)$
+  $\Leftrightarrow|S| \geq q(G-S)\ \ \ \ \  \forall S\subseteq V(G)$
 
-  **NOTATION:** $q_{odd}(G) =$ number of odd components of $G$.
+  **NOTATION:** $q(G) =$ number of odd components of $G$.
 
   **THEOREM (Menger, 1927):** Given a graph $G$ and $A,B \subseteq V(G)$ the maximum number of $A-B$ disjoint paths = the minimum size of a set $X\subseteq V(G)$. separating $A$ from $B$ in $G$.
 
@@ -73,4 +73,4 @@ Two key non-planar graphs:
 
   **THEOREM (Appel & Haken, 1977):** $G$ planar $\to \chi(G) \leq 4$.
 
-  **THEOREM (Robertson-Seymour-Thomas-Sanders, 1995):** Reproved Appel & Haken. 
+  **THEOREM (Robertson-Seymour-Thomas-Sanders, 1995):** Reproved Appel & Haken.

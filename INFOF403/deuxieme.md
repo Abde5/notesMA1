@@ -45,7 +45,7 @@ In the other hand, the **synthesis** phase is responsible of:
 
   ![Languages](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Chomsky-hierarchy.svg/2000px-Chomsky-hierarchy.svg.png)
 
-  For regular languages we have already presented som tools like *regular expressions, automata* or *scanners*.
+  For regular languages we have already presented some tools like *regular expressions, automata* or *scanners*.
 
   **DEFINITION:** Let us fix a finite alphabet $\Sigma$. $L$ (on $\Sigma$) is regular iff:
   - $L = \varnothing$ or
