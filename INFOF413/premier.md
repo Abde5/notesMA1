@@ -19,7 +19,7 @@ This course is particularly based on randomized algorithms.
 
   There are 2 kinds of randomized algorithms.
   - Las Vegas: running time is random
-  - Montecarlo: result is random
+  - Montecarlo: result (choices are) random
 
   Binary space partitions (computer graphics) [check real time rendering]
 
