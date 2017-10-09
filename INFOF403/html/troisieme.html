@@ -643,7 +643,7 @@ pre.editor-colors .fold-marker:after {
 <p>For the example, we’ll take this phrase: “A sequence of a’s followed by a sequence of b’s”.</p>
 <p>First, we can draw an automaton that accepts just a’s, and then another that accepts just b’s (by looping, one state). Then we have to reliate these 2 automaton but we have to put some character for the transition. So we put <span class="math"><script type="math/tex">\epsilon</script></span> on the transition. This is also called a <strong>spontaneous move</strong>.</p>
 <p>Some hidden non-determinisim can be done with <span class="math"><script type="math/tex">\epsilon</script></span> like this:
-<img src="/home/abde/Documents/notesMA1/INFOF403/img/epsNFA.png?v=1506416968287" alt=""></p>
+<img src="/home/abde/Documents/notesMA1/INFOF403/img/epsNFA.png?v=1507506462558" alt=""></p>
 <p><strong>DEFINITION:</strong> Definition of automaton: 5-tuple (<em>Computability and complexity</em>).</p>
 <p><strong>DEFINITION:</strong> Definition of Language <span class="math"><script type="math/tex">L(A)</script></span> (<em>Computability and complexity</em>).</p>
 <p><strong>PROPERTY:</strong> DFA <span class="math"><script type="math/tex">\subseteq</script></span> NFA <span class="math"><script type="math/tex">\subseteq</script></span> <span class="math"><script type="math/tex">\epsilon</script></span>-NFA.</p>
@@ -679,15 +679,15 @@ pre.editor-colors .fold-marker:after {
 <tbody>
 <tr>
 <td><span class="math"><script type="math/tex">\varnothing</script></span></td>
-<td><img src="/home/abde/Documents/notesMA1/INFOF403/img/nothing.png?v=1506419583111" alt=""></td>
+<td><img src="/home/abde/Documents/notesMA1/INFOF403/img/nothing.png?v=1507506462559" alt=""></td>
 </tr>
 <tr>
 <td><span class="math"><script type="math/tex">\epsilon</script></span></td>
-<td><img src="/home/abde/Documents/notesMA1/INFOF403/img/epsilon.png?v=1506419744442" alt=""></td>
+<td><img src="/home/abde/Documents/notesMA1/INFOF403/img/epsilon.png?v=1507506462559" alt=""></td>
 </tr>
 <tr>
 <td><span class="math"><script type="math/tex">a</script></span></td>
-<td><img src="/home/abde/Documents/notesMA1/INFOF403/img/aautomaton.png?v=1506419862530" alt=""></td>
+<td><img src="/home/abde/Documents/notesMA1/INFOF403/img/aautomaton.png?v=1507506462559" alt=""></td>
 </tr>
 <tr>
 <td><span class="math"><script type="math/tex">r_1+r_2</script></span></td>
@@ -702,5 +702,28 @@ pre.editor-colors .fold-marker:after {
 <td>We have to loop the automaton of <span class="math"><script type="math/tex">r</script></span>, jumping from the final state to the initial state, also jumping from the beginning to the end to skip it.</td>
 </tr>
 </tbody>
-</table></body>
+</table>
+<h2>Practical information</h2>
+<p>First part of the project now (scanner). We’ll be using the “Jflex” tool in Java to convert a Regular Language to a DFA.</p>
+<p>“yacc” -&gt; yet another compiler compiler</p>
+<h2>Kleene’s theorem (suite)</h2>
+<p>Example of RE <span class="math"><script type="math/tex">\to \epsilon</script></span>-NFA:</p>
+<p><span class="math"><script type="math/tex">l(l + d)^*</script></span> (see how he did it in the notes).</p>
+<p><strong>PROOF 2:</strong> How to go from <span class="math"><script type="math/tex">\epsilon</script></span>-NFAs to DFAs.</p>
+<p>The DFA will “simulate” all the possible behaviour of the <span class="math"><script type="math/tex">\epsilon</script></span>-NFA. See pages 44-45 from the notes.</p>
+<p><strong>DEFINITION:</strong> <span class="math"><script type="math/tex">\epsilon</script></span>-closure: Let <span class="math"><script type="math/tex">A = (Q,\Sigma,\delta,q_0,F)</script></span> be an <span class="math"><script type="math/tex">\epsilon</script></span>-NFA. For all <span class="math"><script type="math/tex">i\in\mathbb{N}</script></span>, let <span class="math"><script type="math/tex">\epsilon-\mathbb{closure}^i(q)</script></span> be defined as follows.</p>
+<p><span class="math"><script type="math/tex">\epsilon</script></span>-closure <span class="math"><script type="math/tex">^i(q)</script></span> <span class="math"><script type="math/tex">=</script></span> <span class="math"><script type="math/tex">\{q\}</script></span> if <span class="math"><script type="math/tex">i = 0</script></span>, else <span class="math"><script type="math/tex">\delta(\epsilon</script></span>-closure <span class="math"><script type="math/tex">^{i-1}(q),\epsilon) \cup \epsilon</script></span>closure <span class="math"><script type="math/tex">^{i-1} (q)</script></span>.</p>
+<p>So we can define <span class="math"><script type="math/tex">\epsilon</script></span>-closure <span class="math"><script type="math/tex">(q) = \bigcup_{i\geq 0} \epsilon</script></span>-closure <span class="math"><script type="math/tex">^i(q)</script></span></p>
+<p>Now that <span class="math"><script type="math/tex">\epsilon</script></span>-closure is defined, we can continue with the proof from <span class="math"><script type="math/tex">\epsilon</script></span>-NFAs to DFAs. So to construct:</p>
+<ul>
+<li>Set of states of the DFA = all subsets of states of the NFA</li>
+</ul>
+<p><strong>DEFINITION:</strong> Given a <span class="math"><script type="math/tex">\epsilon</script></span>-NFA <span class="math"><script type="math/tex">(Q^A, \Sigma, \delta^A, q_o^A, F^A)</script></span>, there is a DFA <span class="math"><script type="math/tex">(Q^D, \Sigma, \delta^D, q_0^D, F^D)</script></span></p>
+<ul>
+<li><span class="math"><script type="math/tex">Q^D=2^{Q^A}</script></span></li>
+<li><span class="math"><script type="math/tex">q_0^D = \epsilon</script></span>-closure <span class="math"><script type="math/tex">(q_0^A)</script></span></li>
+<li><span class="math"><script type="math/tex">F^D=\{S\in Q^D\ |\ S\ \cap F^A \neq \varnothing\}</script></span></li>
+<li><span class="math"><script type="math/tex">\forall S \in Q^D, \forall a\in \Sigma: \delta^D(S,a) = \epsilon</script></span>-closure <span class="math"><script type="math/tex">(\delta^A (S,a))</script></span></li>
+</ul>
+<p><strong>NOTE:</strong> For the end of this session, Geeraerts explained pages 46-50, read them.</p></body>
 </html>
