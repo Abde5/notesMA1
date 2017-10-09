@@ -72,4 +72,6 @@ So we'll calculate then the total number of intersections:
 
 - $C_{u,v} =$ $1$ if $u\dashv v$, $0$ otherwise.
 - $E(C_{u,v}) = \frac{1}{index(u,v)+1}$
-- $E($ total $\#$ intersections $)$ $= \sum_u\sum_{v\neq u} \frac{1}{index(u,v) + 1} \leq \sum_u\sum_{i = 1}^{n-1} \frac{2}{i+1} \leq n2H_n = O(n\log(n))$. 
+- $E($ total $\#$ intersections $)$ $= \sum_u\sum_{v\neq u} \frac{1}{index(u,v) + 1} \leq \sum_u\sum_{i = 1}^{n-1} \frac{2}{i+1} \leq n2H_n = O(n\log n)$.
+
+**DEFINITION:** Fragments: portions of segments separated by intersections. So the number of fragments = $n + \#$ intersections = $O(n\log n)$. Also, $\#$ cells $=$ $\#$ fragments $+ 1 = O(n\log n)$.
