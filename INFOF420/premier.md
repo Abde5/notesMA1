@@ -83,4 +83,4 @@ We then can apply the cross product (because it uses the sinus) and determine if
 
 ## Convex Hull
 
-**DEFINITION:** The convex hull is the smalles convex set $C$ s.t. $S\subseteq C$.
+**DEFINITION:** The convex hull is the smallest convex set $C$ s.t. $S\subseteq C$.
